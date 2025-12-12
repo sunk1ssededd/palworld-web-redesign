@@ -1,0 +1,257 @@
+/* --- RESET & GLOBAL VARIABLES --- */
+:root {
+    --primary-orange: #ccff00;
+    --dark-bg: #0b0b0b;
+    --glass-bg: rgba(20, 20, 20, 0.85);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --font-head: 'Teko', sans-serif;
+    --font-body: 'Google Sans Code', monospace;
+    --font-ui: 'Funnel Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #fff;
+    font-family: var(--font-body);
+    /* Agar smooth saat scroll */
+    scroll-behavior: smooth;
+}
+
+/* --- FAQ HERO CONTAINER --- */
+.faq-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 140px 20px 80px; /* Padding atas disesuaikan dengan Nav Floating */
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle at center top, #1a1a1a, #000); /* Sedikit gradient */
+}
+
+/* Overlay Pattern (Optional: Dot grid texture) */
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.faq-content {
+    width: 100%;
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- HEADER SECTION --- */
+.faq-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-title {
+    font-family: var(--font-head);
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 0.8;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.sub-title {
+    font-family: var(--font-body);
+    color: var(--primary-orange);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.divider {
+    width: 80px;
+    height: 4px;
+    background: var(--primary-orange);
+    margin: 25px auto 0;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--primary-orange);
+}
+
+/* --- FAQ LIST --- */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cat-title {
+    font-family: var(--font-head);
+    font-size: 2.2rem;
+    color: #666;
+    margin: 40px 0 15px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Item Style */
+.faq-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.faq-item:hover {
+    border-color: #555;
+    transform: translateY(-2px);
+    background: rgba(35, 35, 35, 0.9);
+}
+
+/* Active State */
+.faq-item.active {
+    border-color: var(--primary-orange);
+    box-shadow: 0 4px 20px rgba(255, 153, 0, 0.15);
+    background: rgba(25, 25, 25, 0.98);
+}
+
+/* Button */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 22px 30px;
+    font-family: var(--font-ui);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.faq-item.active .faq-question {
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+/* Icon (+ / x) */
+.icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.4s ease;
+}
+
+.icon::before, .icon::after {
+    content: '';
+    position: absolute;
+    background-color: #888;
+    transition: background-color 0.3s;
+}
+
+/* Garis Vertical */
+.icon::before {
+    top: 0; left: 7px;
+    width: 2px; height: 16px;
+}
+/* Garis Horizontal */
+.icon::after {
+    top: 7px; left: 0;
+    width: 16px; height: 2px;
+}
+
+.faq-item:hover .icon::before,
+.faq-item:hover .icon::after {
+    background-color: #fff;
+}
+
+.faq-item.active .icon {
+    transform: rotate(135deg); /* Berputar jadi X */
+}
+
+.faq-item.active .icon::before,
+.faq-item.active .icon::after {
+    background-color: var(--primary-orange);
+}
+
+/* Answer Area */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+    border-top: 1px solid transparent;
+}
+
+.faq-item.active .faq-answer {
+    border-top: 1px solid rgba(255, 153, 0, 0.1);
+}
+
+.faq-answer p {
+    padding: 10px 30px 30px;
+    color: #b0b0b0;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: var(--font-body);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .faq-hero {
+        padding-top: 120px; /* Sesuaikan dengan navbar mobile */
+    }
+
+    .main-title {
+        font-size: 4.5rem; /* Mengecilkan judul di HP */
+    }
+
+    .sub-title {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .cat-title {
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+
+    .faq-question {
+        padding: 18px 20px; /* Padding lebih kecil agar muat */
+        font-size: 1rem;
+    }
+
+    .faq-answer p {
+        padding: 5px 20px 25px;
+        font-size: 0.95rem;
+    }
+
+    /* Memastikan overlay text terbaca */
+    .overlay {
+        opacity: 0.05;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 3.5rem; /* Judul lebih kecil lagi untuk HP kecil */
+    }
+
+    .faq-hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

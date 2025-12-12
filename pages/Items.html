@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALWORLD - ITEMS</title>
+    <link rel="stylesheet" href="/global/navbar.css">
+    <link rel="stylesheet" href="/pages/css-pages/Items.css">
+    <link rel="shortcut icon" href="/assets/logo/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <nav class="nav-floating">
+        <div class="nav-container">
+            <a href="/index.html" class="logo">PALWORLD.</a>
+
+            <ul class="nav-links">
+                <li><a href="pages/Pals.html">Pals</a></li>
+                <li><a href="pages/Maps.html">Maps</a></li>
+                <li><a href="pages/Items.html">Items</a></li>
+                <!-- <li><a href="/Palworld-Web/pages/Structures.html">Structures</a></li> -->
+                <li><a href="pages/Tierlist.html">Tier List</a></li>
+                <!-- <li><a href="/Palworld-Web/pages/Technology.html">Technology</a></li> -->
+                <li><a href="pages/FAQ.html">FAQ</a></li>
+            </ul>
+
+            <div class="menu-btn" id="mobileMenuBtn">
+                <span>MENU</span>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <span class="close-menu">&times;</span>
+            <ul class="mobile-links-list">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="pages/Pals.html">Pals</a></li>
+                <li><a href="pages/Maps.html">Maps</a></li>
+                <li><a href="pages/Items.html">Items</a></li>
+                <!-- <li><a href="/Palworld-Web/pages/Structures.html">Structures</a></li> -->
+                <li><a href="pages/Tierlist.html">Tier List</a></li>
+                <!-- <li><a href="/Palworld-Web/pages/Technology.html">Technology</a></li> -->
+                <li><a href="pages/FAQ.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main class="items-page">
+        <header class="page-header">
+            <h1>ITEM <span class="highlight">ARCHIVE</span></h1>
+            <p>Database of materials, consumables, and weaponry.</p>
+
+            <div class="search-wrapper glass-panel">
+                <i class="ph ph-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search items...">
+            </div>
+
+            <div class="filters-wrapper">
+                <button class="filter-btn active" data-category="all">ALL</button>
+                <button class="filter-btn" data-category="material">MATERIAL</button>
+                <button class="filter-btn" data-category="consumable">CONSUMABLE</button>
+                <button class="filter-btn" data-category="ammo">AMMO</button>
+                <button class="filter-btn" data-category="weapon">WEAPON</button>
+            </div>
+        </header>
+
+        <div class="items-grid" id="itemsGrid">
+        </div>
+    </main>
+
+    <script src="/js/Pages - js/Item.js"></script>
+    <script src="/js/Pages - js/Navbar.js"></script>
+</body>
+</html>

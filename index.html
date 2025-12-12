@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALWORLD - HOME</title>
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="global/navbar.css">
+    <link rel="shortcut icon" href="assets/logo/favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="fixed-bg"></div>
+
+    <nav class="nav-floating">
+        <div class="nav-container">
+            <a href="/index.html" class="logo">PALWORLD.</a>
+
+            <ul class="nav-links">
+                <li><a href="pages/Pals.html">Pals</a></li>
+                <li><a href="pages/Maps.html">Maps</a></li>
+                <li><a href="pages/Items.html">Items</a></li>
+                <!-- <li><a href="/Palworld-Web/pages/Structures.html">Structures</a></li> -->
+                <li><a href="pages/Tierlist.html">Tier List</a></li>
+                <!-- <li><a href="/Palworld-Web/pages/Technology.html">Technology</a></li> -->
+                <li><a href="pages/FAQ.html">FAQ</a></li>
+            </ul>
+
+            <div class="menu-btn" id="mobileMenuBtn">
+                <span>MENU</span>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <span class="close-menu">&times;</span>
+            <ul class="mobile-links-list">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="pages/Pals.html">Pals</a></li>
+                <li><a href="pages/Maps.html">Maps</a></li>
+                <li><a href="pages/Items.html">Items</a></li>
+                <!-- <li><a href="/Palworld-Web/pages/Structures.html">Structures</a></li> -->
+                <li><a href="pages/Tierlist.html">Tier List</a></li>
+                <!-- <li><a href="/Palworld-Web/pages/Technology.html">Technology</a></li> -->
+                <li><a href="pages/FAQ.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Herosection Palworld -->
+    <main>
+        <section class="hero">
+            <h1 class="giant-text">SURVIVE<br><span class="outline">THE WILD</span></h1>
+            <div class="hero-sub">
+                <p>MULTIPLAYER OPEN-WORLD SURVIVAL CRAFTING GAME</p>
+                <div class="scroll-down">( SCROLL TO EXPLORE )</div>
+            </div>
+        </section>
+
+        <div class="marquee-strip">
+            <div class="track">
+                <span>COLLECT • FIGHT • BUILD • FARM • FACTORY • BREEDING • </span>
+                <span>COLLECT • FIGHT • BUILD • FARM • FACTORY • BREEDING • </span>
+            </div>
+        </div>
+
+
+        <!-- trailer Palworld -->
+        <section id="trailer-hero">
+            <!-- Text Header -->
+            <div class="trailer-text">
+                <h2 class="trailer-title">Official <span>Palworld</span> Trailer</h2>
+                <div class="title-underline"></div>
+                <p class="trailer-subtitle">
+                    Experience the world of Palworld in full cinematic reveal.
+                </p>
+            </div>
+
+            <div class="trailer-wrapper">
+                <div class="spotlight"></div>
+                <div class="trailer-card" id="trailerTrigger">
+                    <video src="/Palworld-Web/assets/background-trailer/PalworldTrailer.mp4" muted loop autoplay
+                        playsinline>
+                    </video>
+
+                    <div class="play-icon-container">
+                        <div class="play-icon"></div>
+                        <div class="pulse-ring"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- VIDEO MODAL -->
+        <div class="video-modal" id="videoModal">
+            <div class="video-modal-backdrop"></div>
+            <div class="video-modal-content">
+                <button class="close-modal" aria-label="Close Video">&times;</button>
+                <div class="video-container">
+                    <video id="popupVideo" src="/Palworld-Web/assets/background-trailer/PalworldTrailer.mp4"
+                        controls>
+                    </video>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- gameplay palworld -->
+        <section class="gameplay-section">
+            <!-- ITEM 01 -->
+            <div class="gameplay-row" data-aos="fade-right">
+                <!-- Kolom Teks -->
+                <div class="text-column">
+                    <span class="giant-number">01</span>
+                    <h2 class="gameplay-title">Over 100 Different Pals</h2>
+                    <div class="separator-line"></div>
+                    <p class="gameplay-desc">
+                        Palworld is home to over 100 unique Pals, each equipped with a diverse set of skills
+                        to enhance the player's adventure. Along your journey, you will also encounter formidable boss
+                        Pals that pose a challenge even for the most seasoned
+                        Pal tamers. Naturally, these boss Pals are also capturable.
+                    </p>
+                    <!-- Badge Platform -->
+                    <div class="platform-badges">
+                        <a href="https://store.steampowered.com/app/1623730/Palworld/" class="badge steam"
+                            target="_blank">
+                            <i class="fa-brands fa-steam"></i>
+                            <span>STEAM</span>
+                        </a>
+                        <a href="https://www.xbox.com/id-ID/games/store/palworld-game-preview/9NKV34XDW014"
+                            class="badge xbox" target="_blank">
+                            <i class="fa-brands fa-xbox"></i>
+                            <span>XBOX</span>
+                        </a>
+                        <a href="https://www.playstation.com/en-id/games/palworld/" class="badge ps" target="_blank">
+                            <i class="fa-brands fa-playstation"></i>
+                            <span>PS5</span>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/palworld/id6503918400?mt=12" class="badge mac"
+                            target="_blank">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MacOS</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolom Video -->
+                <div class="video-column" data-aos="fade-left">
+                    <div class="video-wrapper">
+                        <video autoplay loop muted playsinline>
+                            <source src="/Palworld-Web/assets/gameplay-section-vid/gameplay1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM 02 -->
+            <div class="gameplay-row reverse-layout">
+                <!-- Kolom Teks -->
+                <div class="text-column" data-aos="fade-left">
+                    <span class="giant-number">02</span>
+                    <h2 class="gameplay-title"> Engage in Battles and Capture Pals </h2>
+                    <div class="separator-line"></div>
+                    <p class="gameplay-desc">
+                        Palworld is home to over 100 unique Pals.
+                        Gunakan Pal untuk kerja paksa... maksudnya membangun base.
+                        Otomatisasi pabrik senjata adalah kunci kemenangan.
+                    </p>
+                    <div class="platform-badges">
+                        <a href="https://store.steampowered.com/app/1623730/Palworld/" class="badge steam"
+                            target="_blank">
+                            <i class="fa-brands fa-steam"></i>
+                            <span>STEAM</span>
+                        </a>
+                        <a href="https://www.xbox.com/id-ID/games/store/palworld-game-preview/9NKV34XDW014"
+                            class="badge xbox" target="_blank">
+                            <i class="fa-brands fa-xbox"></i>
+                            <span>XBOX</span>
+                        </a>
+                        <a href="https://www.playstation.com/en-id/games/palworld/" class="badge ps" target="_blank">
+                            <i class="fa-brands fa-playstation"></i>
+                            <span>PS5</span>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/palworld/id6503918400?mt=12" class="badge mac"
+                            target="_blank">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MacOS</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolom Video -->
+                <div class="video-column" data-aos="fade-right">
+                    <div class="video-wrapper">
+                        <video autoplay loop muted playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM 03 -->
+            <div class="gameplay-row" data-aos="fade-right">
+                <!-- Kolom Teks -->
+                <div class="text-column">
+                    <span class="giant-number">03</span>
+                    <h2 class="gameplay-title">Base Building with Pals</h2>
+                    <div class="separator-line"></div>
+                    <p class="gameplay-desc">
+                        Palworld seamlessly integrates elements of battle.
+                        Lempar Sphere dengan strategi. Jika persentase rendah,
+                        serang dulu sampai HP musuh sekarat.
+                    </p>
+                    <!-- Badge Platform -->
+                    <div class="platform-badges">
+                        <a href="https://store.steampowered.com/app/1623730/Palworld/" class="badge steam"
+                            target="_blank">
+                            <i class="fa-brands fa-steam"></i>
+                            <span>STEAM</span>
+                        </a>
+                        <a href="https://www.xbox.com/id-ID/games/store/palworld-game-preview/9NKV34XDW014"
+                            class="badge xbox" target="_blank">
+                            <i class="fa-brands fa-xbox"></i>
+                            <span>XBOX</span>
+                        </a>
+                        <a href="https://www.playstation.com/en-id/games/palworld/" class="badge ps" target="_blank">
+                            <i class="fa-brands fa-playstation"></i>
+                            <span>PS5</span>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/palworld/id6503918400?mt=12" class="badge mac"
+                            target="_blank">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MacOS</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolom Video -->
+                <div class="video-column" data-aos="fade-left">
+                    <div class="video-wrapper">
+                        <video autoplay loop muted playsinline>
+                            <source src="/Palworld-Web/assets/gameplay-section-vid/Gameply3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM 04 -->
+            <div class="gameplay-row reverse-layout">
+                <!-- Kolom Teks -->
+                <div class="text-column" data-aos="fade-left">
+                    <span class="giant-number">04</span>
+                    <h2 class="gameplay-title">Open-World Multiplayer</h2>
+                    <div class="separator-line"></div>
+                    <p class="gameplay-desc">
+                        Palworld is home to over 100 unique Pals.
+                        Gunakan Pal untuk kerja paksa... maksudnya membangun base.
+                        Otomatisasi pabrik senjata adalah kunci kemenangan.
+                    </p>
+                    <div class="platform-badges">
+                        <a href="https://store.steampowered.com/app/1623730/Palworld/" class="badge steam"
+                            target="_blank">
+                            <i class="fa-brands fa-steam"></i>
+                            <span>STEAM</span>
+                        </a>
+                        <a href="https://www.xbox.com/id-ID/games/store/palworld-game-preview/9NKV34XDW014"
+                            class="badge xbox" target="_blank">
+                            <i class="fa-brands fa-xbox"></i>
+                            <span>XBOX</span>
+                        </a>
+                        <a href="https://www.playstation.com/en-id/games/palworld/" class="badge ps" target="_blank">
+                            <i class="fa-brands fa-playstation"></i>
+                            <span>PS5</span>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/palworld/id6503918400?mt=12" class="badge mac"
+                            target="_blank">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MacOS</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolom Video -->
+                <div class="video-column" data-aos="fade-right">
+                    <div class="video-wrapper">
+                        <video autoplay loop muted playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Articles section -->
+        <section class="articles-section">
+            <div class="header-row">
+                <h2>LATEST <span class="highlight">NEWS</span></h2>
+                <!-- <a href="#" class="read-more-btn">READ ALL</a> -->
+            </div>
+
+            <div class="articles-container">
+
+                <article class="art-card">
+                    <div class="art-img">
+                        <img src="/Palworld-Web/assets/Article-foto/Article-1.avif">
+                    </div>
+                    <div class="art-info"><span class="date">TODAY</span>
+                        <h3>Lokasi Legendary Schematics</h3>
+                    </div>
+                </article>
+
+                <article class="art-card">
+                    <div class="art-img"><img src="/Palworld-Web/assets/Article-foto/Article-2.avif"></div>
+                    <div class="art-info"><span class="date">YESTERDAY</span>
+                        <h3>Update Raid Boss: Bellanoir</h3>
+                    </div>
+                </article>
+
+                <article class="art-card">
+                    <div class="art-img"><img src="/Palworld-Web/assets/Article-foto/Article-3.jpg"></div>
+                    <div class="art-info"><span class="date">WEEKLY</span>
+                        <h3>Tier List Pal Terbaik</h3>
+                    </div>
+                </article>
+
+                <article class="art-card">
+                    <div class="art-img"><img src="/Palworld-Web/assets/Article-foto/Article-4.jpg"></div>
+                    <div class="art-info"><span class="date">NEWS</span>
+                        <h3>Pal Baru Ditemukan!</h3>
+                    </div>
+                </article>
+
+                <article class="art-card">
+                    <div class="art-img"><img src="/Palworld-Web/assets/Article-foto/Article-5.jpg"></div>
+                    <div class="art-info"><span class="date">UPDATE</span>
+                        <h3>Crafting Level Max Guide</h3>
+                    </div>
+                </article>
+
+                <article class="art-card">
+                    <div class="art-img"><img src="/Palworld-Web/assets/Article-foto/Article-6.jpg"></div>
+                    <div class="art-info"><span class="date">HOT</span>
+                        <h3>Farming System Optimal</h3>
+                    </div>
+                </article>
+
+                <article class="art-card">
+                    <div class="art-img"><img src="/Palworld-Web/assets/Article-foto/Article-7.jpg"></div>
+                    <div class="art-info"><span class="date">GUIDE</span>
+                        <h3>Boss Terkuat untuk Dilawan</h3>
+                    </div>
+                </article>
+
+                <article class="art-card">
+                    <div class="art-img"><img src="/Palworld-Web/assets/Article-foto/Article-8.avif"></div>
+                    <div class="art-info"><span class="date">INFO</span>
+                        <h3>Pal Starter Terbaik</h3>
+                    </div>
+                </article>
+            </div>
+
+
+            <div class="slider-controls">
+                <button class="slide-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slide-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+
+        <footer class="giant-footer">
+            <h1 class="footer-logo">PALWORLD</h1>
+            <div class="footer-line"></div>
+            <div class="footer-links">
+                <span class="copyright">© 2025</span>
+
+                <a href="https://discord.com/invite/pocketpair" target="_blank" rel="noopener noreferrer">DISCORD</a>
+                <a href="https://x.com/Palworld_EN" target="_blank" rel="noopener noreferrer">TWITTER</a>
+                <a href="https://www.youtube.com/@pocketpair" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+                <a href="https://www.tiktok.com/@palworld_official" target="_blank" rel="noopener noreferrer">TIKTOK</a>
+            </div>
+            <p class="copyright">CREATED BY SatriaNicholll</p>
+        </footer>
+    </main>
+
+    <script src="js/index.js"></script>
+    <script src="js/Pages - js/Articles.js"></script>
+    <script src="js/Pages - js/TrailerReveal.js"></script>
+    <script src="js/Pages - js/Navbar.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 200
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+:root {
+    --pal-green: #dcff2e; /* Warna Signature Home kamu */
+    --pal-dark: #050505;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-muted: #888;
+}
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--pal-dark);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding-top: 100px;
+    background-image: radial-gradient(circle at top center, #1a202c 0%, #050505 60%);
+    min-height: 100vh;
+}
+
+img { max-width: 100%; display: block; }
+
+.items-page {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* header */
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.highlight {
+    color: var(--pal-green);
+    text-shadow: 0 0 30px rgba(220, 255, 46, 0.5); /* Green Glow */
+}
+
+.page-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* SEARCH BAR (Glass Style) */
+.search-wrapper {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 20px;
+    /* right: 20px; */
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 16px 20px 16px 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.search-wrapper input:focus {
+    border-color: var(--pal-green);
+    /* border-color: #fff; */
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(220, 255, 46, 0.1);
+}
+
+.search-wrapper input:focus + i { color: var(--pal-green); }
+
+.filters-wrapper {
+    display: flex;
+    /* justify-content: flex-start; */
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    color: white;
+    border-color: white;
+}
+
+.filter-btn.active {
+    background: var(--pal-green);
+    color: black;
+    border-color: var(--pal-green);
+    box-shadow: 0 0 20px rgba(220, 255, 46, 0.4);
+}
+
+/* grid */
+.items-grid {
+    display: grid;
+    /* Kartu agak lebar untuk menampung info */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.item-card {
+    position: relative;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+}
+
+/* hover */
+.item-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--pal-green);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6),
+                0 0 20px rgba(220, 255, 46, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-title h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    margin: 0;
+    color: white;
+}
+
+.card-title .type-badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--pal-green); /* Aksen Hijau */
+    margin-top: 5px;
+    display: block;
+    font-weight: 600;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Mulai agak gelap & pudar */
+    filter: grayscale(80%) brightness(0.7);
+    transition: all 0.4s ease;
+}
+
+.item-card:hover .card-icon {
+    background: rgba(220, 255, 46, 0.1);
+    /* transform: scale(1.1) ; */
+    transform: scale(1.1) rotate(5deg) ;
+}
+.item-card:hover .card-icon img {
+    filter: grayscale(0%) brightness(1.2); /* Warna Asli keluar */
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    color: #aaa;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+.card-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr; */
+    gap: 10px; /* Jarak antar kotak */
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.stat-box {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.item-card:hover .stat-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(220, 255, 46, 0.3); /* Hijau Palworld */
+}
+
+.stat-box label {
+    font-size: 0.65rem;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.stat-box span {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+.highlight-stat {
+    color: #dcff2e !important;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat label {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.stat span {
+    font-weight: 700;
+    color: white;
+    font-family: 'Syne', sans-serif;
+}
+
+.recipe-area {
+    margin-top: auto;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 15px;
+}
+
+.recipe-area p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.recipe-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.r-item {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+}
+
+.r-item img { width: 24px; height: 24px; }
+
+.r-item span {
+    position: absolute;
+    bottom: -5px; right: -5px;
+    background: var(--pal-green);
+    color: black;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 5px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* @media (max-width: 768px) {
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
+    .page-header h1 {
+        font-size: 2rem;
+    }
+} */
